@@ -32,7 +32,7 @@ class BukuController extends Controller
     {
         Buku::create($request->all());
 
-        return redirect()->route('buku')->with('succes', 'Buku berhasil ditambah');
+        return redirect()->route('buku')->with('success', 'Buku berhasil ditambah');
     }
 
     /**
@@ -43,7 +43,6 @@ class BukuController extends Controller
         $buku = Buku::findOrFail($buku_id);
 
         return view('buku.show', compact('buku'));
-
     }
 
     /**
@@ -65,7 +64,7 @@ class BukuController extends Controller
 
         $buku->update($request->all());
 
-        return redirect()->route('buku')->with('succes', 'Buku berhasil diedit');
+        return redirect()->route('buku')->with('success', 'Buku berhasil diedit');
     }
 
     /**
@@ -77,6 +76,6 @@ class BukuController extends Controller
 
         $buku->delete();
 
-        return redirect()->route('buku')->with('succes', 'Buku berhasil dihapus');
+        return redirect()->route('buku')->with('success', 'Buku berhasil dihapus');
     }
 }

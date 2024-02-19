@@ -17,22 +17,22 @@
     <div class="row">
         <div class="col mb-3">
             <label class="form-label">Penerbit</label>
-            <input type="text" name="penerbit" class="form-control" placeholder="Penerbit" value="" readonly>
+            <input type="text" name="penerbit" class="form-control" placeholder="Penerbit" value="{{$buku->penerbit}}" readonly>
         </div>
         <div class="col mb-3">
             <label class="form-label">Tahun Terbit</label>
-            <input type="text" name="tahun_terbit" class="form-control" placeholder="Tahun Terbit" value=""
+            <input type="text" name="tahun_terbit" class="form-control" placeholder="Tahun Terbit" value="{{$buku->tahun_terbit}}"
                 readonly>
         </div>
     </div>
     <div class="row">
         <div class="col mb-3">
             <label class="form-label">Created At</label>
-            <input type="text" name="created_at" class="form-control" placeholder="Created At" value="" readonly>
+            <input type="text" name="created_at" class="form-control" placeholder="Created At" value="{{$buku->created_at}}" readonly>
         </div>
         <div class="col mb-3">
             <label class="form-label">Updated At</label>
-            <input type="text" name="updated_at" class="form-control" placeholder="Updated At" value="" readonly>
+            <input type="text" name="updated_at" class="form-control" placeholder="Updated At" value="{{$buku->updated_at}}" readonly>
         </div>
     </div>
 @endsection
