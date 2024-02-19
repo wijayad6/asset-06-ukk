@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\UserController;
@@ -63,4 +64,13 @@ Route::controller(BukuController::class)->prefix('buku')->group(function () {
     Route::get('edit/{buku_id}', 'edit')->name('buku.edit');
     Route::put('edit/{buku_id}', 'update')->name('buku.update');
     Route::get('destroy/{buku_id}', 'destroy')->name('buku.destroy');
+});
+Route::controller(PeminjamanController::class)->prefix('pinjam')->group(function () {
+    Route::get('', 'index')->name('pinjam');
+    Route::get('create', 'create')->name('pinjam.create');
+    Route::post('store', 'store')->name('pinjam.store');
+    Route::get('show/{peminjaman_id}', 'show')->name('pinjam.show');
+    Route::get('edit/{peminjaman_id}', 'edit')->name('pinjam.edit');
+    Route::put('edit/{peminjaman_id}', 'update')->name('pinjam.update');
+    Route::get('destroy/{peminjaman_id}', 'destroy')->name('pinjam.destroy');
 });

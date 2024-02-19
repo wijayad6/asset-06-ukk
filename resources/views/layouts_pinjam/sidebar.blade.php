@@ -18,7 +18,7 @@
             <span>Beranda</span></a>
     </li>
     <li class="nav-item">
-        {{-- <a class="nav-link" href="{{ route('pinjam') }}"> --}}
+        <a class="nav-link" href="{{ route('pinjam') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Peminjaman</span></a>
     </li>

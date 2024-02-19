@@ -24,14 +24,14 @@
             </tr>
         </thead>
         <tbody>
-            @if ()
-                @foreach ()
+            @if ($pinjam->count()>0)
+                @foreach ($pinjam as $rs)
                     <tr>
-                        <td class="align-middle"></td>
-                        <td class="align-middle"></td>
-                        <td class="align-middle"></td>
-                        <td class="align-middle"></td>
-                        <td class="align-middle"></td>
+                        <td class="align-middle">{{$loop->iteration}}</td>
+                        <td class="align-middle">{{$rs->buku->judul}}</td>
+                        <td class="align-middle">{{$rs->tanggal_pinjam}}</td>
+                        <td class="align-middle">{{$rs->tanggal_kembali}}</td>
+                        <td class="align-middle">{{$rs->status}}</td>
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="" type="button"
