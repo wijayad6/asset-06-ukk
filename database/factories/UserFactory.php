@@ -30,9 +30,9 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
 
-            'role_id' => mt_rand(1,3),
+            'role_id' => mt_rand(1, 2, 3),
             'alamat' => $this->faker->address(),
-            'remember_token' => Str::random(15),
+            'remember_token' => Str::random(10),
         ];
     }
 

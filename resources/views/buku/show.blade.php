@@ -7,11 +7,11 @@
     <div class="row">
         <div class="col mb-3">
             <label class="form-label">Judul Buku</label>
-            <input type="text" name="judul" class="form-control" placeholder="Judul" value="" readonly>
+            <input type="text" name="judul" class="form-control" placeholder="Judul" value="{{$buku->judul}}" readonly>
         </div>
         <div class="col mb-3">
             <label class="form-label">Penulis</label>
-            <input type="text" name="penulis" class="form-control" placeholder="Penulis" value="" readonly>
+            <input type="text" name="penulis" class="form-control" placeholder="Penulis" value="{{$buku->penulis}}" readonly>
         </div>
     </div>
     <div class="row">

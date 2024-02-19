@@ -36,7 +36,7 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form action="" method="" class="user">
+                            <form action="{{route('register.save')}}" method="POST" class="user">
                                 @csrf
                                 <div class="form-group">
                                     <input name="name" type="text"
@@ -49,6 +49,12 @@
                                         class="form-control form-control-user @error('username')is-invalid @enderror mb-3"
                                         id="exampleusername" placeholder="Username">
                                     @error('username')
+                                        <span class="invalid-feedback">{{ $message }}</span>
+                                    @enderror
+                                    <input name="alamat" type="text"
+                                        class="form-control form-control-user @error('alamat')is-invalid @enderror mb-3"
+                                        id="examplealamat" placeholder="Alamat">
+                                    @error('alamat')
                                         <span class="invalid-feedback">{{ $message }}</span>
                                     @enderror
                                     <input name="role_id" type="text"

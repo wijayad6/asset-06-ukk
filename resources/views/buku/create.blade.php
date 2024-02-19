@@ -4,7 +4,7 @@
 
 @section('contents')
     <hr />
-    <form action="" method="" enctype="multipart/form-data">
+    <form action="{{route('buku.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="container-fluid mb-3">
             <div class="mb-3">
