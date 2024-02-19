@@ -19,8 +19,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
+        'role_id',
+        'alamat',
     ];
 
     /**
@@ -45,6 +48,6 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return $this->belongsTo(Role::class, 'user_id');
+        return $this->belongsTo(Role::class, 'role_id');
     }
 }
