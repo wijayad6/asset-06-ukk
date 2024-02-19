@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/');
+    return view('auth.login');
 });
 
 Route::group(['middleware' => 'guest'], function () {
