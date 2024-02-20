@@ -89,10 +89,8 @@ class PeminjamanController extends Controller
 
     public function cetak_pdf()
     {
-        $pinjam = Pinjam::all();
+        $pinjam = Pinjam::with('buku')->orderBy('created_at', 'DESC')->get();
 
-        $pdf = PDF::loadview('pinjam_pdf', ['pinjam'=>$pinjam]);
-
-        return $pdf->download('struk_peminjaman_pdf');
+        return view('pinjam.pinjam_pdf', compact('pinjam'));
     }
 }

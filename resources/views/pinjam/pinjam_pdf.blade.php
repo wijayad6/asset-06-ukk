@@ -1,4 +1,4 @@
-@extends('layouts_pinjam.app')
+@extends('layouts_cetak.app')
 
 @section('title', 'Daftar Pinjaman')
 
@@ -14,14 +14,14 @@
             </tr>
         </thead>
         <tbody>
-            @if ($pinjam->count()>0)
+            @if ($pinjam->count() > 0)
                 @foreach ($pinjam as $rs)
                     <tr>
-                        <td class="align-middle">{{$loop->iteration}}</td>
-                        <td class="align-middle">{{$rs->buku->judul}}</td>
-                        <td class="align-middle">{{$rs->tanggal_pinjam}}</td>
-                        <td class="align-middle">{{$rs->tanggal_kembali}}</td>
-                        <td class="align-middle">{{$rs->status}}</td>
+                        <td class="align-middle">{{ $loop->iteration }}</td>
+                        <td class="align-middle">{{ $rs->buku->judul }}</td>
+                        <td class="align-middle">{{ $rs->tanggal_pinjam }}</td>
+                        <td class="align-middle">{{ $rs->tanggal_kembali }}</td>
+                        <td class="align-middle">{{ $rs->status }}</td>
                     </tr>
                 @endforeach
             @else
@@ -31,4 +31,7 @@
             @endif
         </tbody>
     </table>
+    <script>
+        window.print()
+    </script>
 @endsection
