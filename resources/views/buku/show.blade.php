@@ -27,11 +27,11 @@
     </div>
     <div class="row">
         <div class="col mb-3">
-            <label class="form-label">Created At</label>
+            <label class="form-label">Dibuat pada :</label>
             <input type="text" name="created_at" class="form-control" placeholder="Created At" value="{{$buku->created_at}}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">Updated At</label>
+            <label class="form-label">Diperbarui pada :</label>
             <input type="text" name="updated_at" class="form-control" placeholder="Updated At" value="{{$buku->updated_at}}" readonly>
         </div>
     </div>

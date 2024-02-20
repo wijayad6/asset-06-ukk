@@ -27,7 +27,7 @@
         </div>
         <div class="row">
             <div class="d-grid">
-                <button class="btn btn-warning">Update</button>
+                <button class="btn btn-warning">Simpan</button>
             </div>
         </div>
     </form>
