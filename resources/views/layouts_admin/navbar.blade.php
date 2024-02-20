@@ -51,10 +51,10 @@
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-                    {{auth()->user()->username}}
+                    {{ auth()->user()->username }}
                     <br>
                     <small>
-                        {{auth()->user()->role_id}}
+                        {{ auth()->user()->role_id }}
                     </small>
                 </span>
                 <img class="img-profile rounded-circle" src="{{ asset('admin_assets/img/undraw_profile.svg') }}">

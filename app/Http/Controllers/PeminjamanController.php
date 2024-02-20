@@ -13,7 +13,7 @@ class PeminjamanController extends Controller
      */
     public function index()
     {
-        $pinjam = Pinjam::orderBy('created_at', 'DESC')->get();
+        $pinjam = Pinjam::with('buku')->orderBy('created_at', 'DESC')->get();
 
         return view('pinjam.index', compact('pinjam'));
     }
@@ -23,7 +23,9 @@ class PeminjamanController extends Controller
      */
     public function create()
     {
-        return view('pinjam.create');
+        $buku = Buku::all();
+
+        return view('pinjam.create', compact('buku'));
     }
 
     /**
@@ -41,7 +43,9 @@ class PeminjamanController extends Controller
      */
     public function show(int $peminjaman_id)
     {
-        $pinjam = Pinjam::findOrFail($peminjaman_id);
+        $buku = Buku::all();
+
+        $pinjam = Pinjam::with('buku')->findOrFail($peminjaman_id);
 
         return view('pinjam.show', compact('pinjam'));
     }
@@ -51,9 +55,11 @@ class PeminjamanController extends Controller
      */
     public function edit(int $peminjaman_id)
     {
-        $pinjam = Pinjam::findOrFail($peminjaman_id);
+        $buku = Buku::all();
 
-        return view('pinjam.edit', compact('pinjam'));
+        $pinjam = Pinjam::with('buku')->findOrFail($peminjaman_id);
+
+        return view('pinjam.edit', compact('pinjam', 'buku'));
     }
 
     /**

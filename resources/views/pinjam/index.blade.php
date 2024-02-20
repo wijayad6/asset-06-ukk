@@ -34,13 +34,13 @@
                         <td class="align-middle">{{$rs->status}}</td>
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="" type="button"
+                                <a href="{{route('pinjam.show', $rs->peminjaman_id)}}" type="button"
                                     class="btn btn-secondary">Detail</a>
 
-                                <a href="" type="button"
+                                <a href="{{route('pinjam.edit', $rs->peminjaman_id)}}" type="button"
                                     class="btn btn-warning">Edit</a>
 
-                                <form action="" method=""
+                                <form action="{{route('pinjam.destroy', $rs->peminjaman_id)}}" method="POST"
                                     type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
                                     @csrf
                                     @method('DELETE')

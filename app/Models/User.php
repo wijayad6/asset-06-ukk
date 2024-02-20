@@ -50,8 +50,12 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function roles()
+    public function role()
     {
         return $this->belongsTo(Role::class, 'role_id');
+    }
+    public function pinjam()
+    {
+        return $this->belongsTo(Pinjam::class, 'user_id');
     }
 }

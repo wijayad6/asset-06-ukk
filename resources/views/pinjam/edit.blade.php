@@ -19,17 +19,17 @@
             </div>
             <div class="col mb-3">
                 <label class="form-label">Tanggal Pinjam</label>
-                <input type="date" name="tanggal_pinjam" class="form-control" placeholder="Tanggal Pinjam"
+                <input type="date" name="tanggal_pinjam" id="tanggal_pinjam" class="form-control" placeholder="Tanggal Pinjam"
                     value="{{ $pinjam->tanggal_pinjam }}">
             </div>
             <div class="col mb-3">
                 <label class="form-label">Tanggal kembali</label>
-                <input type="date" name="tanggal_kembali" class="form-control" placeholder="Tanggal kembali"
+                <input type="date" name="tanggal_kembali" id="tanggal_kembali" class="form-control" placeholder="Tanggal kembali"
                     value="{{ $pinjam->tanggal_kembali }}">
             </div>
             <div class="col mb-3">
                 <label class="form-label">Status</label>
-                <input type="text" name="status" class="form-control" placeholder="Status"
+                <input type="text" name="status" id="status" class="form-control" placeholder="Status"
                     value="{{ $pinjam->status }}">
             </div>
         </div>
