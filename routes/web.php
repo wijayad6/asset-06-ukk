@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 Route::group(['middleware' => 'guest'], function () {
@@ -75,5 +75,3 @@ Route::controller(PeminjamanController::class)->prefix('pinjam')->group(function
     Route::put('edit/{peminjaman_id}', 'update')->name('pinjam.update');
     Route::get('destroy/{peminjaman_id}', 'destroy')->name('pinjam.destroy');
 });
-
-Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
