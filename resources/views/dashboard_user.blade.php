@@ -3,5 +3,5 @@
 @section('title', 'Beranda')
 
 @section('contents')
-
+    
 @endsection
