@@ -18,7 +18,7 @@
                         <div class="col-md-6">
                             <label class="labels">Username</label>
                             <input type="text" name="username" class="form-control" placeholder="Username"
-                                value="">
+                                value="{{auth()->user()->username}}">
                         </div>
                         <div class="col-md-6">
                             <label class="labels">Email</label>

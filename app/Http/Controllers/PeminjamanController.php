@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Buku;
 use App\Models\Pinjam;
+use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\Request;
 
 class PeminjamanController extends Controller
@@ -84,5 +85,14 @@ class PeminjamanController extends Controller
         $pinjam->delete();
 
         return redirect()->route('pinjam')->with('success', 'Buku berhasil dihapus dari daftar pinjaman');
+    }
+
+    public function cetak_pdf()
+    {
+        $pinjam = Pinjam::all();
+
+        $pdf = PDF::loadview('pinjam_pdf', ['pinjam'=>$pinjam]);
+
+        return $pdf->download('struk_peminjaman_pdf');
     }
 }

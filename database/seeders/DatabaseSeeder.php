@@ -31,6 +31,6 @@ class DatabaseSeeder extends Seeder
         Role::create([
             'role_name' => 'user',
         ]);
-        User::factory(5)->create();
+        User::factory()->create();
     }
 }

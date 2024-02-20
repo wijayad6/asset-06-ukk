@@ -67,6 +67,7 @@ Route::controller(BukuController::class)->prefix('buku')->group(function () {
 });
 Route::controller(PeminjamanController::class)->prefix('pinjam')->group(function () {
     Route::get('', 'index')->name('pinjam');
+    Route::get('pinjam_pdf', 'cetak_pdf')->name('pinjam.cetak_pdf');
     Route::get('create', 'create')->name('pinjam.create');
     Route::post('store', 'store')->name('pinjam.store');
     Route::get('show/{peminjaman_id}', 'show')->name('pinjam.show');
@@ -74,3 +75,5 @@ Route::controller(PeminjamanController::class)->prefix('pinjam')->group(function
     Route::put('edit/{peminjaman_id}', 'update')->name('pinjam.update');
     Route::get('destroy/{peminjaman_id}', 'destroy')->name('pinjam.destroy');
 });
+
+Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');

@@ -1,10 +1,11 @@
 @extends('layouts_pinjam.app')
 
-@section('title', 'Daftar Buku')
+@section('title', 'Daftar Pinjaman')
 
 @section('contents')
-    <div class="d-flex align-item-center justify-content-between">
+    <div class="d-flex align-item-center justify-content-between mb-3">
         <a href="{{ route('pinjam.create') }}" class="btn btn-primary">Tambah Pinjaman</a>
+        <a href="{{ route('pinjam.cetak_pdf') }}" class="btn btn-primary">Cetak Struk</a>
     </div>
     <hr />
     @if (Session::has('success'))
