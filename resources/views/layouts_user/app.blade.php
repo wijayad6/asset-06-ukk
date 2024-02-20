@@ -52,22 +52,7 @@
                     </div>
 
                     @yield('contents')
-                    {{-- @if ($pinjam->count() > 0)
-                        @foreach ($pinjam as $rs)
-                            <div class="card" style="width: 18rem;">
-                                <img src="{{ asset('admin_assets/img/undraw_posting_photo.svg') }}" class=" mx-3 my-3"
-                                    alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $rs->buku->judul }}</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        @endforeach
-                    @else
-                    @endif --}}
+                    
 
                 </div>
                 <!-- /.container-fluid -->

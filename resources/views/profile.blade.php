@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-md-6">
                             <label class="labels">Email</label>
-                            <input type="text" name="email" disabled class="form-control" value=""
+                            <input type="text" name="email" disabled class="form-control" value="{{auth()->user()->email}}"
                                 placeholder="Email">
                         </div>
                     </div>
@@ -30,11 +30,11 @@
                         <div class="col-md-6">
                             <label class="labels">Nama Lengkap</label>
                             <input type="text" name="name" class="form-control" placeholder="Nama Lengkap"
-                                value="">
+                                value="{{auth()->user()->name}}">
                         </div>
                         <div class="col-md-6">
                             <label class="labels">Level</label>
-                            <input type="text" name="level" class="form-control" placeholder="Level" value="">
+                            <input type="text" name="level" class="form-control" placeholder="Level" value="{{auth()->user()->role_id}}">
                         </div>
                     </div>
 

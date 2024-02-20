@@ -9,9 +9,14 @@
     </a>
 
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <hr class="sidebar-divider mb-3">
 
     <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('dashboard_user') }}">
+        <i class="fas fa-fw fa-home"></i>
+        <span>Beranda</span></a>
+    </li>
     <li class="nav-item">
         <a class="nav-link" href="{{ route('pinjam') }}">
         <i class="fas fa-fw fa-table"></i>

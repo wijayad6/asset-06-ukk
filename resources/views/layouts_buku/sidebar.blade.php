@@ -9,15 +9,11 @@
     </a>
 
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <hr class="sidebar-divider mb-3">
 
     <!-- Nav Item - Tables -->
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('buku') }}">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Buku</span></a>
-    </li>
+
+
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">

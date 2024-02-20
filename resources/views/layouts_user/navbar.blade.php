@@ -53,9 +53,9 @@
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                     {{auth()->user()->username}}
                     <br>
-                    <small>
+                    {{-- <small>
                         {{auth()->user()->role_id}}
-                    </small>
+                    </small> --}}
                 </span>
                 <img class="img-profile rounded-circle" src="{{ asset('admin_assets/img/undraw_profile.svg') }}">
             </a>

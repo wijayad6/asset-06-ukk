@@ -9,7 +9,7 @@
     </a>
 
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <hr class="sidebar-divider mb-3">
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
