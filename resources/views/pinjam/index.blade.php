@@ -41,7 +41,7 @@
                                 <a href="{{route('pinjam.edit', $rs->peminjaman_id)}}" type="button"
                                     class="btn btn-warning">Edit</a>
 
-                                <form action="{{route('pinjam.destroy', $rs->peminjaman_id)}}" method="POST"
+                                <form action="{{route('pinjam.destroy', $rs->peminjaman_id)}}" method="GET"
                                     type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
                                     @csrf
                                     @method('DELETE')

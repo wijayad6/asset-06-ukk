@@ -40,7 +40,7 @@
                                 <a href="{{route('buku.edit', $rs->buku_id)}}" type="button"
                                     class="btn btn-warning">Edit</a>
 
-                                <form action="{{route('buku.destroy', $rs->buku_id)}}" method="POST" type="button"
+                                <form action="{{route('buku.destroy', $rs->buku_id)}}" method="GET" type="button"
                                     class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
                                     @csrf
                                     @method('DELETE')
