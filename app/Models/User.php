@@ -56,6 +56,6 @@ class User extends Authenticatable
     }
     public function pinjam()
     {
-        return $this->belongsTo(Pinjam::class, 'user_id');
+        return $this->hasMany(Pinjam::class, 'user_id');
     }
 }
